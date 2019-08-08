@@ -26,19 +26,19 @@ Nothing changes as long as you are using the plugin.
 <div class="g-recaptcha" data-sitekey="your-site-key" ></div>
 ```
 
-#Other properties which can be passed:
+# Other properties which can be passed:
 - verifyCallback: Use this for your success callback. You will get access to the token same as before and also the whole ResponsiveRecaptcha object as a second value.
 - expiredCallback: Use this for your expired callback. As above this will also give you access to the Recaptcha object which was created.
 - errorCallback: Use this for your error callback. This will also contain the object.
 - theme: If you wish to use the dark theme simply pass this as 'dark'.
 
 ## Properties and Methods Available in the ResponsiveRecaptcha object
-#Properties:
+# Properties:
 - el : This objects recaptcha's related ID attribute.
 - initialized : a timestamp when the recaptcha was rendered. 
 - successTimestamp : timestamp when the recaptcha was completed successfully.
 - successToken : the success token for this particular recaptcha object.
-#Methods:
+# Methods:
 - setError(mode,message) : This lets you set a custom error for the recaptcha modes available are: error,expired,custom. Error and Expired will display the same message as they would for the error callback and the expired callback, custom is if you wish to display a custom error.
 - clearError() : This function clears the error.
 - reset() : iIf you wish to reset or rerender some recaptcha you could just call this method.
