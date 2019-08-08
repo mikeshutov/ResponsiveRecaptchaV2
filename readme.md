@@ -1,4 +1,4 @@
-#ResponsiveRecaptchaV2
+# ResponsiveRecaptchaV2
 
 This project is a small plugin which solves a few common styling problems when it comes to making a mobile friendly/stylable checkbox recaptcha. It is just one solution which seems to work for me. If you find any bugs/issues/feedback/suggestions feel free to create an issue and I will try to address them in a timely manner.
 
