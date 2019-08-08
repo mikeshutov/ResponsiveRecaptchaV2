@@ -25,8 +25,8 @@ ResponsiveRecaptcha({
 });
 ```
 
-**OR:
-This will let you call a few custom methods and have access to a few custom properties which were added by the plugin.
+**OR:**
+This will let you call a few custom methods and have access to a few custom properties which are added by the plugin.
 ```
 var recaptcha = ResponsiveRecaptcha({
   el:'your-element-id',
