@@ -1,0 +1,17 @@
+{
+  "name": "responsiverecaptcha",
+  "version": "1.0.0",
+  "description": "Plugin which makes recaptcha responsive/stylable using a few workarounds and provides a few additional options.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "uglifyjs src/responsiveRecaptcha.js --comments -o dist/responsiveRecaptcha.min.js -c -m && uglifycss src/style.css --output dist/style.min.css"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "uglify-js": "^3.6.0",
+    "uglifycss": "0.0.29"
+  }
+}

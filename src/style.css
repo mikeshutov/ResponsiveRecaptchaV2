@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+.responsiveRecaptcha {
+    max-width:320px;
+    position: relative;
+}
+.grecapWrapper{
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    color: #000;
+    display: flex;
+    height:60px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 7px 0 0;
+}
+.grecapWrapper .recap{
+    float: left;
+    margin-left: 6px;
+    margin-top: 7px;
+    overflow: hidden;
+    width: 150px;
+}
+.grecapWrapper .recap > div{
+    margin-left: -5px;
+}
+.g-recap-logo{
+    background: url(https://www.gstatic.com/recaptcha/api2/logo_48.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    height: 24px;
+    margin: 0 13px 0 13px;
+    width: 24px;
+}
+.g-recap-logo-text{
+    color:#555;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+.g-recap-logo-links{
+    color:#555;
+    font-size:8px;
+}
+.g-recap-logo-links a{
+    color:#555;
+    font-family: 'Roboto', sans-serif;
+    text-decoration:none;
+}
+.g-recap-logo-links a:hover{
+    text-decoration: underline;
+}
+/* Errors */
+.responsiveRecaptcha .recaptcha-error{
+    bottom: 100%;
+    position: absolute;
+    width: 100%;
+}
+.responsiveRecaptcha .recaptcha-error.bottom{
+    bottom:auto;
+    top:100%;
+}
+.responsiveRecaptcha .recaptcha-error.left{
+    bottom:auto;
+    right:100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.responsiveRecaptcha .recaptcha-error.top p:after{
+    content:'';
+    border-top: 9px solid #f9f9f9;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    height: 0;
+    left:50%;
+    position:absolute; 
+    top:100%;
+    transform:translateX(-50%);
+    width: 0; 
+}
+.responsiveRecaptcha .recaptcha-error.bottom p:after{
+    bottom: 100%;
+    content:'';
+    border-bottom: 9px solid #f9f9f9;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    height: 0;
+    left:50%;
+    position:absolute; 
+    transform:translateX(-50%);
+    width: 0; 
+}
+.responsiveRecaptcha .recaptcha-error.left p:after{
+    content: '';
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #fff;
+    border-top: 7px solid transparent;
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 0;
+}
+.responsiveRecaptcha .recaptcha-error p{
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,.2));
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto 5px;
+    padding:5px;
+    position: relative;
+    text-align:center;
+}
+.responsiveRecaptcha .recaptcha-error.bottom p{
+    margin: 5px auto 0;
+}
+.responsiveRecaptcha .recaptcha-error.left p,
+.responsiveRecaptcha .recaptcha-error.right p{
+    margin: auto 5px;
+}
+.responsiveRecaptcha .recaptcha-error.error p,
+.responsiveRecaptcha .recaptcha-error.expired p,
+.responsiveRecaptcha .recaptcha-error.custom p{
+    color:#ff0000;
+}
+/* Dark Theme */
+.dark .grecapWrapper{
+    background: #222;
+    border: 1px solid #525252;
+}
+.dark .g-recap-logo-text,
+.dark .g-recap-logo-links,
+.dark .g-recap-logo-links a{
+    color: #f5f5f5; 
+}
+.responsiveRecaptcha.dark .recaptcha-error p{
+    background: #222;
+    border-color: #222;
+}
+.responsiveRecaptcha.dark .recaptcha-error.top p:after{
+    border-top-color:#222;
+    filter: drop-shadow(0px 1px 2px rgba(255,255,255,.2));
+}
+.responsiveRecaptcha.dark .recaptcha-error.bottom p:after{
+    border-bottom-color:#222;
+    filter: drop-shadow(0px -1px 2px rgba(255,255,255,.2));
+}
+.responsiveRecaptcha .recaptcha-error.left p:after{
+    border-left-color:#222;
+    filter: drop-shadow(0px -1px 2px rgba(255,255,255,.2)); 
+}
+/* Vertical */
+.responsiveRecaptcha.vertical{
+    max-width: 180px;
+}
+.vertical .grecapWrapper{
+    flex-direction:column;
+    height: 120px;
+    padding: 0 0 7px;
+}
+.vertical .grecapWrapper .recap{
+    height: 60px;
+}
+.vertical .grecapWrapper .recap > div{
+    margin-top: -8px;
+}
+@media screen and (max-width:425px){
+    .recaptcha-challange{
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.85);
+    }
+}
