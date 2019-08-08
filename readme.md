@@ -2,13 +2,13 @@
 
 This project is a small plugin which solves a few common styling problems when it comes to making a mobile friendly/stylable checkbox recaptcha. It is just one solution which seems to work for me. If you find any bugs/issues/feedback/suggestions feel free to create an issue and I will try to address them in a timely manner.
 
-##Dependencies:
+## Dependencies:
 None
 
-##Installation:
+## Installation:
 Download and use the dist files.
 
-##Basic Usage:
+## Basic Usage:
 Once you have downloaded and included the js and css files there are a few ways to use the plugin.
 
 **Explicit Rendering**
