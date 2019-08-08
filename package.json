@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "uglifyjs src/responsiveRecaptcha.js --comments -o dist/responsiveRecaptcha.min.js -c -m && uglifycss src/style.css --output dist/style.min.css"
   },
-  "author": "",
+  "author": "Mike Shutov",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
