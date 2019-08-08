@@ -2,6 +2,11 @@
 
 This project is a small plugin which solves a few common styling problems when it comes to making a mobile friendly/stylable checkbox recaptcha. It is just one solution which seems to work for me. If you find any bugs/issues/feedback/suggestions feel free to create an issue and I will try to address them in a timely manner. Otherwise I will try to update it with a few more methods/fix a few bugs. May add events as well.
 
+
+**Documentation still being worked on
+
+
+
 ## Dependencies:
 None
 
@@ -36,10 +41,13 @@ Nothing changes as long as you are using the plugin.
 ```
 
 # Other properties which can be passed:
-- verifyCallback: Use this for your success callback. You will get access to the token same as before and also the whole ResponsiveRecaptcha object as a second value.
+- callback: Use this for your success callback. You will get access to the token same as before and also the whole ResponsiveRecaptcha object as a second value.
 - expiredCallback: Use this for your expired callback. As above this will also give you access to the Recaptcha object which was created.
 - errorCallback: Use this for your error callback. This will also contain the object.
 - theme: If you wish to use the dark theme simply pass this as 'dark'.
+- error: If you wish to start the recaptcha in error mode.
+- errorCustom: If you start the recaptcha in error mode what message you wish to display.
+- errorPosition: Where should the error be displayed. Available options are: top,bottom,left,right defaults to top.
 
 ## Properties and Methods Available in the ResponsiveRecaptcha object
 # Properties:
@@ -52,4 +60,3 @@ Nothing changes as long as you are using the plugin.
 - clearError() : This function clears the error.
 - reset() : iIf you wish to reset or rerender some recaptcha you could just call this method.
 
-More docs coming soon.
