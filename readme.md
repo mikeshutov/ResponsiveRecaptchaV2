@@ -48,6 +48,7 @@ Nothing changes as long as you are using the plugin.
 - error: If you wish to start the recaptcha in error mode.
 - errorCustom: If you start the recaptcha in error mode what message you wish to display.
 - errorPosition: Where should the error be displayed. Available options are: top,bottom,left,right defaults to top.
+- mode: Which layout you wish to show the recaptcha in (horizontal,vertical) defaults to horizontal.
 
 ## Properties and Methods Available in the ResponsiveRecaptcha object
 # Properties:
