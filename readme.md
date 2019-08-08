@@ -11,7 +11,8 @@ This project is a small plugin which solves a few common styling problems when i
 None
 
 ## Installation:
-Download and use the dist files.
+Download and use the dist files. 
+**Note:** You do not need to add the google recaptcha js file the plugin will handle this for you.
 
 ## Basic Usage:
 Once you have downloaded and included the js and css files there are a few ways to use the plugin.
