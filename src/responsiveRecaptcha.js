@@ -179,7 +179,6 @@
     };
     // Auto Render
     document.querySelectorAll('.g-recaptcha').forEach(function(recap){
-        console.log('que');
         if(!recap.id){
             recap.id = 'autoResponsiveRecaptcha-'+Date.now();
         }
@@ -190,7 +189,6 @@
                 _settings[data] = true;
             }
         } 
-        console.log(_settings);
         ResponsiveRecaptcha(_settings);
     });
     // Add ResponsiveRecaptcha to window
