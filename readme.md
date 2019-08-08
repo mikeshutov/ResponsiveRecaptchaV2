@@ -1,6 +1,6 @@
 # ResponsiveRecaptchaV2
 
-This project is a small plugin which solves a few common styling problems when it comes to making a mobile friendly/stylable checkbox recaptcha. It is just one solution which seems to work for me. If you find any bugs/issues/feedback/suggestions feel free to create an issue and I will try to address them in a timely manner.
+This project is a small plugin which solves a few common styling problems when it comes to making a mobile friendly/stylable checkbox recaptcha. It is just one solution which seems to work for me. If you find any bugs/issues/feedback/suggestions feel free to create an issue and I will try to address them in a timely manner. Otherwise I will try to update it with a few more methods/fix a few bugs. May add events as well.
 
 ## Dependencies:
 None
@@ -15,6 +15,15 @@ Once you have downloaded and included the js and css files there are a few ways 
 Initialize the recaptcha of your choice by calling ResponsiveRecaptcha and passing an object with the el and sitekey where el is the id of the element you are using.
 ```
 ResponsiveRecaptcha({
+  el:'your-element-id',
+  sitekey:'your-site-key-here' 
+});
+```
+
+**OR:
+This will let you call a few custom methods and have access to a few custom properties which were added by the plugin.
+```
+var recaptcha = ResponsiveRecaptcha({
   el:'your-element-id',
   sitekey:'your-site-key-here' 
 });
