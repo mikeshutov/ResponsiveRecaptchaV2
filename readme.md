@@ -99,4 +99,6 @@ var recaptcha = new ResponsiveRecaptcha({
 });
 ```
 *Automatic Rendering of above example:*
+```
 <div class="g-recaptcha" data-sitekey="your-site-key" data-error data-error-custom="My custom error" data-error-position="left"></div>
+```
