@@ -52,6 +52,8 @@ Nothing changes as long as you are using the plugin.
 - mode: Which layout you wish to show the recaptcha in (horizontal,vertical) defaults to horizontal.
 
 ## Properties and Methods Available in the ResponsiveRecaptcha object
+Properties are available under the props of the object.
+
 # Properties:
 - el : This objects recaptcha's related ID attribute.
 - initialized : a timestamp when the recaptcha was rendered. 
