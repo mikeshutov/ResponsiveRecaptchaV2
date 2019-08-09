@@ -69,7 +69,7 @@ Start a recaptcha with a callback:
 ```
 var recaptcha = new ResponsiveRecaptcha({   
   el: "recaptcha",
-  sitekey: "6LdE_K4UAAAAABT1ecMqST5NOMFuuT1owMkPY_eW",
+  sitekey: "your site key",
   callack: function(token){
       console.log('This is my callback');
   }
@@ -89,7 +89,7 @@ Start a recaptcha with an error showing on the left:
 ```
 var recaptcha = new ResponsiveRecaptcha({   
   el: "recaptcha",
-  sitekey: "6LdE_K4UAAAAABT1ecMqST5NOMFuuT1owMkPY_eW",
+  sitekey: "your site key",
   error: true,
   errorCustom: 'My custom error',
   errorPosition: 'left'
