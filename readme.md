@@ -65,3 +65,33 @@ Properties are available under the props of the object.
 - reset() : iIf you wish to reset or rerender some recaptcha you could just call this method.
 
 ## Examples:
+Start a recaptcha with a callback:
+```
+var recaptcha = new ResponsiveRecaptcha({   
+  el: "recaptcha",
+  sitekey: "6LdE_K4UAAAAABT1ecMqST5NOMFuuT1owMkPY_eW",
+  callack: function(token){
+      console.log('This is my callback');
+  }
+});
+```
+
+Set a custom error for a recaptcha:
+```
+recatpcha.setError('custom','My Custom Error');
+```
+Clearing a recaptcha error:
+```
+recaptcha.clearError();
+```
+
+Start a recaptcha with an error showing on the left:
+```
+var recaptcha = new ResponsiveRecaptcha({   
+  el: "recaptcha",
+  sitekey: "6LdE_K4UAAAAABT1ecMqST5NOMFuuT1owMkPY_eW",
+  error: true,
+  errorCustom: 'My custom error',
+  errorPosition: 'left'
+});
+```
