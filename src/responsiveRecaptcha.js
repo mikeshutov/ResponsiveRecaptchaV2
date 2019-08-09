@@ -120,7 +120,11 @@
                 captchas[captchaEl].verified = true;
                 captchas[captchaEl].successToken = token;
                 captchas[captchaEl].successTimestamp = Date.now();
-                captchas[captchaEl].verifyCallback(token, captchas[captchaEl]);
+                if(typeof(captchas[captchaEl].verifyCallback) === 'string'){
+                    eval('('+captchas[captchaEl].verifyCallback+')();');
+                }else{
+                    captchas[captchaEl].verifyCallback(token, captchas[captchaEl]);
+                }
             },
             'expired-callback': function(){ 
                 setTimeout(function(){
