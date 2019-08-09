@@ -134,11 +134,19 @@
                 delete captchas[captchaEl].successToken;
                 delete captchas[captchaEl].successTimestamp;
                 ResponsiveRecaptchaError(captchas[captchaEl].el,'expired');
-                captchas[captchaEl].expiredCallback(captchas[captchaEl]);
+                if(typeof(captchas[captchaEl].expiredCallback) === 'string'){
+                    eval('('+captchas[captchaEl].expiredCallback+')();');
+                } else {
+                    captchas[captchaEl].expiredCallback(captchas[captchaEl]);
+                }
             },
             'error-callback': function(){
                 ResponsiveRecaptchaError(captchas[captchaEl].el);
-                captchas[captchaEl].errorCallback(captchas[captchaEl]);
+                if(typeof(captchas[captchaEl].errorCallback) === 'string'){
+                    eval('('+captchas[captchaEl].errorCallback+')();');
+                } else {
+                    captchas[captchaEl].errorCallback(captchas[captchaEl]);
+                }
             },
             theme: captchas[captchaEl].theme,
             tabindex:captchas[captchaEl].tabindex,
