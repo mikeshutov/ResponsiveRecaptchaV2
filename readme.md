@@ -65,7 +65,7 @@ Properties are available under the props of the object.
 - reset() : iIf you wish to reset or rerender some recaptcha you could just call this method.
 
 ## Examples:
-Start a recaptcha with a callback:
+Start a recaptcha with a success callback:
 ```
 var recaptcha = new ResponsiveRecaptcha({   
   el: "recaptcha",
@@ -75,7 +75,10 @@ var recaptcha = new ResponsiveRecaptcha({
   }
 });
 ```
-
+*Automatic Rendering of above example:*
+```
+<div class="g-recaptcha" data-sitekey="your-site-key" data-callback="dothis()"></div>
+```
 Set a custom error for a recaptcha:
 ```
 recatpcha.setError('custom','My Custom Error');
@@ -95,3 +98,5 @@ var recaptcha = new ResponsiveRecaptcha({
   errorPosition: 'left'
 });
 ```
+*Automatic Rendering of above example:*
+<div class="g-recaptcha" data-sitekey="your-site-key" data-error data-error-custom="My custom error" data-error-position="left"></div>
