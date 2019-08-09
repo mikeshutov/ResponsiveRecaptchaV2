@@ -65,3 +65,40 @@ Properties are available under the props of the object.
 - reset() : iIf you wish to reset or rerender some recaptcha you could just call this method.
 
 ## Examples:
+Start a recaptcha with a success callback:
+```
+var recaptcha = new ResponsiveRecaptcha({   
+  el: "recaptcha",
+  sitekey: "your site key",
+  callack: function(token){
+      console.log('This is my callback');
+  }
+});
+```
+*Automatic Rendering of above example:*
+```
+<div class="g-recaptcha" data-sitekey="your-site-key" data-callback="dothis()"></div>
+```
+Set a custom error for a recaptcha:
+```
+recatpcha.setError('custom','My Custom Error');
+```
+Clearing a recaptcha error:
+```
+recaptcha.clearError();
+```
+
+Start a recaptcha with an error showing on the left:
+```
+var recaptcha = new ResponsiveRecaptcha({   
+  el: "recaptcha",
+  sitekey: "your site key",
+  error: true,
+  errorCustom: 'My custom error',
+  errorPosition: 'left'
+});
+```
+*Automatic Rendering of above example:*
+```
+<div class="g-recaptcha" data-sitekey="your-site-key" data-error data-error-custom="My custom error" data-error-position="left"></div>
+```
