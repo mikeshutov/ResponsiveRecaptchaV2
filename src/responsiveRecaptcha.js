@@ -28,7 +28,7 @@
             mode: settings.mode || 'horizontal',
             theme: settings.theme || 'light',
             expiredMessage: settings.expiredError || 'Verification expired. Check the recaptcha again.',
-            errorMessage: settings.error || 'An Error Has Occured with Recaptcha.',
+            errorMessage: settings.errorMessage || 'An Error Has Occured with Recaptcha.',
             errorCustom: settings.errorCustom || '',
             debug: false,
             tabindex: settings.tabindex || 0,
@@ -87,9 +87,13 @@
         } else if(mode === 'custom'){
             errorMessage = message;
         } 
-        var errorBlock = document.querySelector('#'+el+' .responsiveRecaptcha .recaptcha-error');
-        errorBlock.classList.add(mode);
-        errorBlock.innerHTML = '<p class="message">'+errorMessage+'</p>';
+        if(document.querySelectorAll('#'+el+' .responsiveRecaptcha .recaptcha-error .message').length > 0){
+            document.querySelector('#'+el+' .responsiveRecaptcha .recaptcha-error .message').textContent = errorMessage;
+        } else {
+            var errorBlock = document.querySelector('#'+el+' .responsiveRecaptcha .recaptcha-error');
+            errorBlock.classList.add(mode);
+            errorBlock.innerHTML = '<p class="message">'+errorMessage+'</p>';
+        }
     }
     ClearError = function(el){
         var errorBlock = document.querySelector('#'+el+' .responsiveRecaptcha .recaptcha-error');
