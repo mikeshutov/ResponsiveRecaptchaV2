@@ -34,7 +34,7 @@
             tabindex: settings.tabindex || 0,
             errorPosition: settings.errorPosition || 'top'
         };
-        this.settings = captchas[settings.el];
+        this.props = captchas[settings.el];
         // If we have already loaded everything but a new recaptcha is being added we will just render that new recaptcha
         if(state === 'ready'){
             ResponsiveRecaptcha.renderOne(settings.el);
@@ -165,10 +165,10 @@
     };
     // API Per Recaptcha Methods
     ResponsiveRecaptcha.prototype.reset = function(){
-        ResetRecaptcha(this.settings.recaptcha);
+        ResetRecaptcha(this.props.recaptcha);
     };
     ResponsiveRecaptcha.prototype.getResponse = function(){
-        return grecaptcha.getResponse(this.settings.recaptcha);
+        return grecaptcha.getResponse(this.props.recaptcha);
     };
     ResponsiveRecaptcha.prototype.setError = function(mode,message){
         if(!mode){
@@ -176,10 +176,10 @@
         } else if(['error','expired','custom'].indexOf(mode)===-1){
             return console.log('Invalid Mode');
         }
-        ResponsiveRecaptchaError(this.settings.el,mode,message);
+        ResponsiveRecaptchaError(this.props.el,mode,message);
     };
     ResponsiveRecaptcha.prototype.clearError = function(){
-        ClearError(this.settings.el);
+        ClearError(this.props.el);
     };
     // Auto Render
     document.querySelectorAll('.g-recaptcha').forEach(function(recap){
